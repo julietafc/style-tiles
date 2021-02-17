@@ -1,8 +1,8 @@
 /* change these */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,28 +14,23 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #187227;
+  --link-color: #ea4e7f;
+  --link-hover-color: #fbe14d;
+  --color-4: #3991d6;
+  --color-5: #fff0e4;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --primary-font: "Kalam", sans-serif;
+  --secondary-font: "Rubik", serif;
+  --third-font: "Open Sans", sans-serif;
+  --main-text-color: rgb(61, 61, 61);
 
   --white-space: 1rem;
 }
 
-button {
-  transition: all 3s;
-}
-a {
-  transition: all 3s;
-}
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  color: #187227;
 }
 
 button:active {
@@ -44,11 +39,11 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
 }
 html {
   font-size: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
+  background-image: url(../img/4.png);
 }
 
 img {
@@ -66,7 +61,7 @@ footer {
 
 .full-width {
   background: var(--bg-color);
-  color: white;
+  color: #fd8272;
   width: 100%;
 }
 
@@ -75,24 +70,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: -2px;
   padding-right: 0.75em;
+  margin-bottom: 0.2em;
   font-weight: bold;
-  color: white;
-}
-
-.header-wrapper h2 {
-  font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
-  margin: var(--white-space) 0;
+  color: #fd8272;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
-}
-
-.header-wrapper h4 {
-  font-size: 0.8rem;
 }
 
 main {
@@ -116,9 +101,10 @@ ul {
 }
 
 .swatches li {
-  margin-right: 5vw;
-  height: 15vw;
-  width: 20%;
+  margin-right: 3%;
+  height: 8vw;
+  width: 9vw;
+  border-radius: 50%;
 }
 
 ul li:last-child {
@@ -145,26 +131,22 @@ ul li:last-child {
   background-color: var(--color-5);
 }
 
-.textures li {
-  height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
+.illustration li {
+  height: 10vw;
+  width: 30%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+.illustration-swatch-1 {
+  background-image: url(../img/2.png);
 }
 
-.texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+.illustration-swatch-2 {
+  background: url(../img/1.png);
 }
 
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+.illustration-swatch-3 {
+  background: url(../img/3.png);
 }
 
 .images ul {
@@ -184,24 +166,22 @@ button {
   background: var(--link-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font: 1.25em/1 var(--secondary-font);
   letter-spacing: 1px;
-  color: white;
+  color: var(--color-5);
   text-transform: uppercase;
   text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: var(--color-4);
 }
 
 button:focus,
 button:active,
 button:focus-within {
-  outline: 0;
   border-radius: 4px;
 }
 
@@ -210,18 +190,19 @@ button:focus-within {
 }
 
 .h1-sample {
-  font-size: 2.4rem;
-  font-weight: bold;
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  font-weight: 300;
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
-  font-style: italic;
   font-size: 1.25rem;
+  letter-spacing: 0.4em;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
+  font-family: var(--third-font);
   line-height: 1.5;
   max-width: 960px;
 }
@@ -272,8 +253,9 @@ footer {
 
   .swatches li {
     margin-right: 3%;
-    height: 10vw;
-    width: 20%;
+    height: 8vw;
+    width: 9vw;
+    border-radius: 50%;
   }
 
   .textures li {
